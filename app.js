@@ -13,11 +13,13 @@ console.log(name)
         //chidere tramite un secondo promt che eta ha l'utente
         eta = prompt("quanti anni hai?")
         console.log(eta)
-    //il prezzo del biglietto è definito in base ai km (0.21 € al km)
+    //il prezzo del biglietto è definito in base ai km (0.21 € al km) e deve essere arrontondato alle prime 2 decimali
         //dichiarare una variabile perzzoBiglietto
-        let perzzoBiglietto 
+        let perzzoBiglietto
         //clacolare qunaro costa il biglietto in base al km
         perzzoBiglietto = km * 0.21
+        //arrotondiamo il prezzo alle prime 2 decimali
+        perzzoBiglietto = Math.round(perzzoBiglietto * 100) / 100
     //va applicato uno sconto del 20% per i minorenni
         //dichiare una variabile chiamata sconto1
         let sconto1
@@ -51,7 +53,11 @@ console.log(name)
 
         }
         //ALTRIMENTI no
-    //stampa prezzoBiglietto     
+    //stampa prezzoBiglietto  
+          
         console.log(perzzoBiglietto)
+        document.getElementById("prezzo").innerHTML = "Il prezzo del bigletto é " + perzzoBiglietto
+       
+        
         
 
